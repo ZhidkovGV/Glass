@@ -1,19 +1,50 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
+  body footer {
+    display: flex; }
 
 a {
   color: #00B7FF; }
 
 .navigation {
   padding: 5px 20px;
+  color: #fff;
   width: 100%;
   display: flex;
   background: #5cd1d8;
   align-items: center; }
+  .navigation h1 {
+    margin-left: 10px; }
   .navigation .navigation-links {
     margin-left: auto;
     display: flex; }
     .navigation .navigation-links a {
-      margin: 0 5px; }
+      margin: 0 20px;
+      font-size: 1.5em;
+      background: #5cb2d8;
+      border-radius: 4px;
+      color: #fff;
+      padding: 5px 10px;
+      text-decoration: none; }
+      .navigation .navigation-links a:hover {
+        background: #5cc5d8; }
+
+footer {
+  padding: 20px 50px;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background: #5cd1d8; }
+  footer .contditions {
+    width: 23%; }
+  footer .phones {
+    width: 10%; }
+  footer .socials img {
+    height: 32px; }
+  footer div {
+    display: flex;
+    margin: 0 80px; }
 
 /*# sourceMappingURL=style.css.map */
