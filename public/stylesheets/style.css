@@ -1,8 +1,19 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
+
+.navigation {
+  padding: 5px 20px;
+  width: 100%;
+  display: flex;
+  background: #5cd1d8;
+  align-items: center; }
+  .navigation .navigation-links {
+    margin-left: auto;
+    display: flex; }
+    .navigation .navigation-links a {
+      margin: 0 5px; }
 
 /*# sourceMappingURL=style.css.map */
