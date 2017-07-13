@@ -1,1 +1,26 @@
-хуето хуелки
+<section class="glass-filters">
+    <label>Название:</label>
+    <input type="text" class="form-control filter-item" id="nameTerm" placeholder="Поиск">
+    <label>Цена:</label>
+    <input type="number" min="0" max="1000" id="priceTermMin" placeholder="От" class="filter-item num-filter form-control">
+    <input type="number" min="0" max="1000" id="priceTermMax" placeholder="До" class="filter-item num-filter form-control">
+    <button class="btn btn-default filter-item">Искать</button>
+</section>
+<section class="spinners-list">
+{{#each products}}
+    <div class="spinner">
+        <img class="img-responsive" src={{imgLink}}>
+        <div class="spinner-heading">
+            <h1>{{name}}</h1>
+            <span>{{price}}р</span>
+        </div>
+        <p>{{description}}</p>
+        <a href="/spinners/{{_id}}">Узнать больше</a>
+    </div>
+{{/each}}
+</section>
+<section class="glass-pagination">
+    {{#each pageCount}}
+        <a class="btn btn-default" href="/?offset={{this}}">{{this}}</a>
+    {{/each}}
+</section>
