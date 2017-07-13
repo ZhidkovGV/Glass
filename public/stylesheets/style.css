@@ -1,9 +1,14 @@
 body {
-  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
   body p, body h1 {
     margin: 0; }
   body footer {
-    display: flex; }
+    display: flex;
+    position: fixed;
+    bottom: 0; }
 
 a {
   color: #00B7FF; }
@@ -14,7 +19,8 @@ a {
   width: 100%;
   display: flex;
   background: #5cd1d8;
-  align-items: center; }
+  align-items: center;
+  position: fixed; }
   .navigation h1 {
     margin-left: 10px; }
   .navigation .navigation-links {
