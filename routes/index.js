@@ -10,7 +10,15 @@ router.get('/', function(req, res, next) {
   console.log(req.query);
   const limit = req.query.limit || DEFAULT_LIMIT;
   const offset = req.query.offset ? (parseInt(req.query.offset) -1) * limit : DEFAULT_OFFSET;
-  Product.find().limit(limit).skip(offset).exec(function (err, products) {
+  const search = req.query.search || '';
+  const minPrice = req.query.price_min || 0;
+  const maxPrice = req.query.price_max || 10000;
+  const filters = {
+      'name' : new RegExp(search, 'i'),
+      'price' : {$gte : minPrice, $lte: maxPrice},
+  };
+  Product.find(filters)
+      .limit(limit).skip(offset).exec(function (err, products) {
       if(err) {
         console.log(err);
       }
@@ -20,7 +28,7 @@ router.get('/', function(req, res, next) {
       for (var i = 1 ; i <= pageCount; i++) {
         pages.push(i);
       }
-      Product.count(null,function (err, count) {
+      Product.find(filters).count(null,function (err, count) {
           const pageCount = parseInt(count / limit);
 
           var pages = [];
