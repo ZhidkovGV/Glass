@@ -14,7 +14,8 @@ a {
   color: #00B7FF; }
 
 .navigation {
-  padding: 5px 20px;
+  padding: 0 20px;
+  height: 60px;
   color: #fff;
   width: 100%;
   display: flex;
@@ -24,21 +25,23 @@ a {
   .navigation h1 {
     margin-left: 10px; }
   .navigation .navigation-links {
+    height: 100%;
     margin-left: auto;
     display: flex; }
     .navigation .navigation-links a {
-      margin: 0 20px;
+      display: flex;
+      align-items: center;
       font-size: 1.5em;
-      background: #5cb2d8;
-      border-radius: 4px;
+      background: #4ec7ce;
       color: #fff;
       padding: 5px 10px;
       text-decoration: none; }
       .navigation .navigation-links a:hover {
-        background: #5cc5d8; }
+        background: #fff;
+        color: #5cd1d8; }
 
 footer {
-  padding: 20px 50px;
+  padding: 10px 50px;
   color: #fff;
   width: 100%;
   justify-content: center;
@@ -50,7 +53,8 @@ footer {
   footer .phones {
     width: 10%; }
   footer .socials img {
-    height: 32px; }
+    height: 32px;
+    cursor: pointer; }
   footer div {
     display: flex;
     margin: 0 80px; }
@@ -90,13 +94,13 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 15%; }
+  padding: 0 15% 90px; }
   .glass-pagination a {
     margin: 0 5px;
     margin-bottom: 20px; }
 
 .glass-filters {
-  margin-top: 20px;
+  margin-top: 70px;
   display: flex;
   align-items: center;
   padding: 0 15%; }
